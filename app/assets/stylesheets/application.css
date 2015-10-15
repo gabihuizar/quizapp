@@ -15,4 +15,12 @@
 h1 {
 	color: #C036BD;
 	font-family: 'Oswald', sans-serif;
+	font-size: 100px;
+	text-align: center;
+}
+.pug {
+	text-align: center;
+	display: block;
+	margin: 0x auto;
+
 }
