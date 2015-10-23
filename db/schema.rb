@@ -23,11 +23,4 @@ ActiveRecord::Schema.define(version: 20151023175716) do
     t.datetime "updated_at"
   end
 
-  create_table "reasonspugsaregreat", force: true do |t|
-    t.string   "pugcomment"
-    t.string   "puglover"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 end
