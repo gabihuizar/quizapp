@@ -1,8 +1,35 @@
 <h1>Reasons Why We Love Pugs</h1>
 <div class = 'pug'>
 	<img src = '/assets/pugwithglasses.jpg'>
+	<h2><%= @pugcomment.comment %></h2>
+	<h3>-<%= @pugcomment.person %></h3>
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  	Why do you love pugs?
+	</button>
 </div>
 
 
-<h2><%= @pugcomment.comment %></h2>
-<h3>-<%= @pugcomment.person %></h3>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Reasons Why I Love Pugs</h4>
+      </div>
+      <%= simple_form_for @pugcomment do |f| %>
+      <div class="modal-body">
+			<%= f.input :comment, label: 'Leave a comment about pugs please', placeholder: 'Their noses are so cute!' %>
+			<br />
+			<%= f.input :person, label: 'Your name here', placeholder: 'Patricia PugLover' %>
+		
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= f.submit 'Add your pug love!', :class => 'btn btn-warning' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
