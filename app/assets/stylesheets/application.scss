@@ -11,6 +11,9 @@
  *= require_self
  *= require_tree .
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 h1 {
 	color: #C036BD;
