@@ -1,6 +1,10 @@
 class PugcommentsController < ApplicationController
 		def index
-			@pugcomment = Pugcomment.order("RANDOM()").first
+			@pugcomment = Pugcomment.last
+		end
+
+		def new
+			@pugcomment = Pugcomment.new
 		end
 
 		def create

@@ -1,0 +1,7 @@
+<h1>Tell us why you love pugs!</h1>
+<%= simple_form_for Pugcomment.new do |f| %>
+  <%= f.input :comment %>
+  <%= f.input :person %>
+  <br />
+  <%= f.submit 'Add your pug love!', :class => 'btn btn-warning' %>
+<% end %>
